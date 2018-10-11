@@ -59,7 +59,7 @@ function getCirclesProperties(radiuses) {
 const categories = radiuses.map((add,i)=> {
 let result = {}
 
-cir = 2 * Math.PI * radiuses[i]
+cir = 2 * Math.PI  * radiuses[i]
 sur = Math.PI * radiuses[i] * radiuses[i]
 result.radius = radiuses[i]
 result.circumference = cir.toFixed(3)
