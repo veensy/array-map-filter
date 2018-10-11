@@ -50,7 +50,22 @@ Sortie attendue:
 
 */
 
-function getStudentsPerCurriculum(campuses, curriculumName) {
-}
+function getStudentsPerCurriculum(campuses, curriculumName){
+ 
+  return campuses.filter((valeur,i) =>{ 
+      let result = []
+       if( (valeur.curriculums[0].name) == curriculumName ){
+     
+     return valeur
+       }
+        
+        
+    
+  }).map((val)=>{
+      return val.city +': '+ val.curriculums[0].numStudents
+  })
+  
+  
+  }
 
 module.exports = getStudentsPerCurriculum;

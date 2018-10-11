@@ -39,7 +39,17 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
-}
+ 
+  return items.filter((valeur) =>{
+      let up = search.charAt(0).toUpperCase() + search.substring(1)
+      if(valeur.includes(search,up) || valeur.includes(up)){
+    return valeur
+      }
+  })
+  
+  
+  
+  } 
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

@@ -24,7 +24,21 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
-}
+  str =''  
+  names.filter((valeur) =>{
+    str = str + ' ' + valeur 
+  })
+  let spli = str.split(' ')
+  let result = []
+  for(let i = 0; i < spli.length;i++){
+      if(spli[i] === 'Stark'){
+    result [i] = spli[i-1] + ' ' + spli[i]	
+      }   
+  }
+  return result.filter((valeur) =>{
+      return valeur
+  })
+   }
 
 // Ne pas modifier l'export
 module.exports = keepStarks;

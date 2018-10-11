@@ -43,6 +43,18 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
+  let i = 0
+  let result =[]
+  const descriptions = foods.map(function(restaurant){
+	if(restaurant.isVegetarian == true){
+      result[i] = (`${restaurant.food} is suitable for vegetarians`)
+		  i++
+    }else{
+      result[i] = (`${restaurant.food} is not suitable for vegetarians`)
+	    i++
+    }
+})
+return result
 }
 
 

@@ -1,4 +1,4 @@
-/* Array.prototype.map - Exercice 1
+/* strings.prototype.map - Exercice 1
 
 Ecrire une fonction getStringsLength qui reçoit comme un argument un tableau de chaînes.
 En utilisant map, cette fonction doit renvoyer un tableau avec,
@@ -22,8 +22,15 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
+  let i = 0
+  let result =[]
+  let map1 = strings.map(function(strings){
+    result[i] = (strings + ' contains ' + strings.length + ' characters')
+    i++
+    
+})
+return result
 }
-
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
 // console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
